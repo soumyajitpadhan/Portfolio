@@ -1,4 +1,5 @@
 import React from 'react'
+import property_listing_platform from '../assets/property_listing_platform.png'
 import Cards from './Cards'
 import { useTheme } from '../Context/ThemeContext'
 
@@ -8,9 +9,18 @@ const Projects = () => {
 
     const projectJson = [
         {
+            title: 'PROPERTY LISTING PLATFORM',
+            desc: 'A sleek and intuitive property discovery app built with React.js, Node.js, Express, and MongoDB, offering a fast, modern, and user-friendly experience.',
+            image: property_listing_platform,
+            stack: ['React', 'CSS', 'Node.js', 'Express', 'MongoDB'],
+            live: "https://property-listing-platform-frontendbrilliance.vercel.app/",
+            github: "https://github.com/soumyajitpadhan/Property_Listing_Platform"
+        },
+        {
             title: 'WebApp',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
             image: 'https://placehold.co/600x400',
+            stack: ['React', 'Tailwind', 'Node.js'],
             live: "#",
             github: "#"
         },
@@ -18,6 +28,7 @@ const Projects = () => {
             title: 'WebApp',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
             image: 'https://placehold.co/600x400',
+            stack: ['React', 'Tailwind', 'Node.js'],
             live: "#",
             github: "#"
         },
@@ -25,6 +36,7 @@ const Projects = () => {
             title: 'WebApp',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
             image: 'https://placehold.co/600x400',
+            stack: ['React', 'Tailwind', 'Node.js'],
             live: "#",
             github: "#"
         },
@@ -32,13 +44,7 @@ const Projects = () => {
             title: 'WebApp',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
             image: 'https://placehold.co/600x400',
-            live: "#",
-            github: "#"
-        },
-        {
-            title: 'WebApp',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
-            image: 'https://placehold.co/600x400',
+            stack: ['React', 'Tailwind', 'Node.js'],
             live: "#",
             github: "#"
         },

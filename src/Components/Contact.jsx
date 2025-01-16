@@ -7,6 +7,8 @@ import facebook from '../assets/facebook.png'
 import instagram from '../assets/instagram.png'
 import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
+import email from '../assets/email.png'
+import phone from '../assets/phone.png'
 import Lottie from 'lottie-react'
 import contact from '../assets/Contact.json'
 
@@ -89,17 +91,13 @@ const Contact = () => {
                     <div className='md:w-1/2 mb-8 ml-2 md:mb-0'>
                         <h2 className='text-3xl font-bold mb-3 text-red-500'>Get in Touch</h2>
                         <p className='mb-4 text-white/85'>I'm always excited about new opportunities and collaborations. Feel free to reach out!</p>
+                        <p className='mb-4 text-white/85'><span><img src={phone} alt="" className='h-6 w-6 inline mr-2' /></span>7327848104</p>
+                        <p className='mb-4 text-white/85'> <span><img src={email} alt="" className='h-6 w-6 inline mr-2' /></span>soumyajitpadhan15@gmail.com</p>
                         <div className='flex space-x-4'>
-                            <a href="#" className='text-foreground/60 hover:text-foreground/80'>
-                                <img src={facebook} alt="" className='h-6 w-6' />
-                            </a>
-                            <a href="#" className='text-foreground/60 hover:text-foreground/80'>
-                                <img src={instagram} alt="" className='h-6 w-6' />
-                            </a>
-                            <a href="#" className='text-foreground/60 hover:text-foreground/80'>
+                            <a href="https://www.linkedin.com/in/soumyajit-padhan-ab3190243/" target='_blank' rel='noopener noreferrer' className='text-foreground/60 hover:text-foreground/80'>
                                 <img src={linkedin} alt="" className='h-6 w-6' />
                             </a>
-                            <a href="#" className='text-foreground/60 hover:text-foreground/80'>
+                            <a href="https://github.com/soumyajitpadhan" target='_blank' rel='noopener noreferrer' className='text-foreground/60 hover:text-foreground/80'>
                                 <img src={github} alt="" className='h-6 w-6' />
                             </a>
                         </div>

@@ -8,6 +8,8 @@ const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const { theme, toggleTheme } = useTheme();
 
+    const closeMobileMenu = () => setMobileMenuOpen(false);
+
     return (
         <header
             className={`sticky top-0 z-50 w-full border-b backdrop-blur px-4 lg:px-0 
@@ -42,9 +44,9 @@ const Navbar = () => {
             {mobileMenuOpen && (
                 <div className='md:hidden'>
                     <div className='space-y-1 px-3 pb-3 pt-2'>
-                        <a href="#about" className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>About</a>
-                        <a href="#projects" className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Projects</a>
-                        <a href="#contact" className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Contact</a>
+                        <a href="#about" onClick={closeMobileMenu} className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>About</a>
+                        <a href="#projects" onClick={closeMobileMenu} className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Projects</a>
+                        <a href="#contact" onClick={closeMobileMenu} className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Contact</a>
                     </div>
                 </div>
             )}
