@@ -23,6 +23,19 @@ const Navbar = () => {
                         <a href="#about" className='transition-colors text-foreground/60 hover:text-red-500'>About</a>
                         <a href="#projects" className='transition-colors text-foreground/60 hover:text-red-500'>Projects</a>
                         <a href="#contact" className='transition-colors text-foreground/60 hover:text-red-500'>Contact</a>
+                        <a
+                            href="https://drive.google.com/file/d/1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className='transition-colors text-foreground/60 hover:text-red-500'
+                            onClick={(e) => {
+                                e.preventDefault(); // Prevent default behavior to handle both actions
+                                window.open("https://drive.google.com/file/d/1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO/view?usp=sharing", "_blank");
+                                window.location.href = "https://drive.google.com/uc?export=download&id=1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO";
+                            }}
+                        >
+                            Resume
+                        </a>
                     </nav>
                 </div>
                 <div className='flex items-center space-x-4'>
@@ -47,6 +60,19 @@ const Navbar = () => {
                         <a href="#about" onClick={closeMobileMenu} className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>About</a>
                         <a href="#projects" onClick={closeMobileMenu} className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Projects</a>
                         <a href="#contact" onClick={closeMobileMenu} className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>Contact</a>
+                        <a
+                            href="#contact"
+                            onClick={(e) => {
+                                e.preventDefault(); // Prevent default anchor behavior
+                                closeMobileMenu(); // Close the mobile menu
+                                window.open("https://drive.google.com/file/d/1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO/view?usp=sharing", "_blank");
+                                window.location.href = "https://drive.google.com/uc?export=download&id=1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO";
+                            }}
+                            className={`block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-100 hover:text-red-500 ${theme === 'dark' ? 'text-white' : 'text-gray-700'
+                                }`}
+                        >
+                            Resume
+                        </a>
                     </div>
                 </div>
             )}

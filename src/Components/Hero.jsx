@@ -28,7 +28,16 @@ const Hero = () => {
               </h1>
               <p className='md-text-2xl text-xl mb-4'>Web Developer</p>
               <p className='mb-4 '>I'm a passionate web developer with expertise in React and modern web technologies. I love creating beautiful and functional website that solve real world problems.</p>
-              <a href="https://drive.google.com/file/d/1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO/view?usp=sharing" target="_blank" rel="noopener noreferrer" download>
+              <a
+                href="https://drive.google.com/file/d/1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default behavior
+                  window.open("https://drive.google.com/file/d/1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO/view?usp=sharing", "_blank");
+                  window.location.href = "https://drive.google.com/uc?export=download&id=1VwtKGrD621EftjDRjoAjnTOdHk9UZKYO";
+                }}
+              >
                 <button
                   className={`relative flex h-[50px] w-40 items-center justify-center overflow-hidden rounded-md px-3 py-2 text-white shadow-2xl transition-all 
                   ${theme === 'light' ? 'bg-black' : 'bg-red-500'} 
