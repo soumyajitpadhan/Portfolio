@@ -1,5 +1,7 @@
 import React from 'react'
 import property_listing_platform from '../assets/property_listing_platform.png'
+import LaunchFund from '../assets/LaunchFund.png'
+import Autovate from '../assets/Autovate.png'
 import Cards from './Cards'
 import { useTheme } from '../Context/ThemeContext'
 
@@ -9,6 +11,14 @@ const Projects = () => {
 
     const projectJson = [
         {
+            title: 'LaunchFund',
+            desc: 'LaunchFund is a simple crowdfunding platform that helps users create campaigns, track donations, and engage with supporters in real time.',
+            image: LaunchFund,
+            stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
+            live: "https://launchfund.netlify.app/",
+            github: "https://github.com/soumyajitpadhan/LaunchFund"
+        },
+        {
             title: 'PROPERTY LISTING PLATFORM',
             desc: 'A sleek and intuitive property discovery app built with React.js, Node.js, Express, and MongoDB, offering a fast, modern, and user-friendly experience.',
             image: property_listing_platform,
@@ -17,36 +27,12 @@ const Projects = () => {
             github: "https://github.com/soumyajitpadhan/Property_Listing_Platform"
         },
         {
-            title: 'WebApp',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
-            image: 'https://placehold.co/600x400',
-            stack: ['React', 'Tailwind', 'Node.js'],
-            live: "#",
-            github: "#"
-        },
-        {
-            title: 'WebApp',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
-            image: 'https://placehold.co/600x400',
-            stack: ['React', 'Tailwind', 'Node.js'],
-            live: "#",
-            github: "#"
-        },
-        {
-            title: 'WebApp',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
-            image: 'https://placehold.co/600x400',
-            stack: ['React', 'Tailwind', 'Node.js'],
-            live: "#",
-            github: "#"
-        },
-        {
-            title: 'WebApp',
-            desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis recusandae illo dolorem laborum fugiat quam.',
-            image: 'https://placehold.co/600x400',
-            stack: ['React', 'Tailwind', 'Node.js'],
-            live: "#",
-            github: "#"
+            title: 'Autovate',
+            desc: 'Autovate is an AI-driven self-driving app that adapts to real-time road conditions for safe and efficient navigation, created for learning purposes.',
+            image: Autovate,
+            stack: ['React', 'Tailwind CSS', 'Redux', 'Firebase'],
+            live: "https://autovate.netlify.app/",
+            github: "https://github.com/soumyajitpadhan/Autovate-The-Future-Of-Mobility"
         },
     ];
 
