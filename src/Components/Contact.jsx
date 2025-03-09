@@ -1,16 +1,14 @@
 import React, { useRef, useState } from 'react'
 import { useTheme } from '../Context/ThemeContext'
 import emailjs from '@emailjs/browser';
-// import { ToastContainer, toast } from 'react-toastify';
 import { toast, Toaster } from 'react-hot-toast'
-import facebook from '../assets/facebook.png'
-import instagram from '../assets/instagram.png'
 import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
 import email from '../assets/email.png'
 import phone from '../assets/phone.png'
 import Lottie from 'lottie-react'
 import contact from '../assets/Contact.json'
+import { ClipLoader } from 'react-spinners';
 
 const Contact = () => {
 
@@ -18,8 +16,11 @@ const Contact = () => {
 
     const formRef = useRef();
 
+    const [loading, setLoading] = useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoading(true);
 
         const formData = {
             name: formRef.current['name'].value,
@@ -37,16 +38,6 @@ const Contact = () => {
             )
             .then(
                 () => {
-                    // toast.success('Message sent successfully!', {
-                    //     position: "top-right",
-                    //     autoClose: 5000,
-                    //     hideProgressBar: false,
-                    //     closeOnClick: false,
-                    //     pauseOnHover: true,
-                    //     draggable: true,
-                    //     progress: undefined,
-                    //     theme: theme === 'dark' ? 'dark' : 'light',
-                    // });
                     toast('Message sent successfully!',
                         {
                             icon: '✅',
@@ -59,16 +50,6 @@ const Contact = () => {
                     formRef.current.reset();
                 },
                 (error) => {
-                    // toast.error('Failed to send message. Please try again.', {
-                    //     position: "top-right",
-                    //     autoClose: 5000,
-                    //     hideProgressBar: false,
-                    //     closeOnClick: false,
-                    //     pauseOnHover: true,
-                    //     draggable: true,
-                    //     progress: undefined,
-                    //     theme: theme === 'dark' ? 'dark' : 'light',
-                    // });
                     toast('Failed to send message. Please try again.',
                         {
                             icon: '❌',
@@ -80,11 +61,10 @@ const Contact = () => {
                         });
                     console.log('EmailJS Error:', error);
                 },
-            );
+            ).finally(() => setLoading(false));
     };
 
     return (
-        // <section id='contact' className='z-50 bg-gray-800 relative py-10 px-5 md:px-0'>
         <section id='contact' className={`z-50 relative py-10 px-5 md:px-0 ${theme === 'dark' ? 'bg-background-dark' : 'bg-gray-800'}`}>
             <div className='mb-16 max-w-7xl mx-auto'>
                 <div data-aos='fade-up' data-aos-delay='250' className='flex flex-col md:flex-row justify-between items-center'>
@@ -117,7 +97,9 @@ const Contact = () => {
                             <label htmlFor="message" className='block text-sm font-medium text-gray-700'>Message</label>
                             <textarea id='message' name='message' placeholder='Enter Your Message' className='mt-1 p-2 block w-full rounded-md border-gray-300 outline-none shadow-sm focus:border-red-500 focus:ring-1 focus:ring-red-500 focus:outline-none transition duration-500' required />
                         </div>
-                        <button className='bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-black transition duration-300 ease-in hover:shadow-md hover:shadow-red-500'>Send Message</button>
+                        <button className='bg-red-500 text-white w-32 px-3 py-2 rounded-lg hover:bg-black transition duration-300 ease-in hover:shadow-md hover:shadow-red-500 flex justify-center items-center'>
+                            {loading ? <ClipLoader size={20} color='#fff' /> : "Send Message"}
+                        </button>
                     </form>
                 </div>
             </div>
